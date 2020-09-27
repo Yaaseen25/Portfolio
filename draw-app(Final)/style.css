@@ -1,0 +1,159 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+    width:auto;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 230px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+
+/*create a blur effect*/
+#blur {
+    padding:3em 1em 1em;
+    position:absolute;
+    -webkit-filter: blur(.25em);
+    background:#fff;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    
+}
+
+
+    #canvasHolder, input{
+      position: relative;
+        top:-500px;
+        left:500px;
+    }
+      
+    #text{
+      font-size: 15px;
+        text-decoration-color: blue;
+      }
+
+    #circle{
+      position: relative;
+      background: transparent;
+    }
+
+    #spiro{
+      position: absolute;
+      left: 0;
+    }
+
+    #image{
+      position: absolute;
+      display: none;
+    }
+
+    #sliders div{
+      display: inline-block;
+      padding: 10px 5px 5px 0px;
+/*
+      position:relative;
+        top:-100px;
+*/
+    }
+
+    button{
+      margin: 10px 5px 0 0;
+      padding: 5px;
+      border-radius: 3px;
+    }
+
+    #draw{
+      background: #419BF9;
+      color: white;
+    }
+
+    #draw[disabled]{
+      background: #97c8fc;
+      color: white;
+    }
+
+    input[type=checkbox], button{
+      cursor: pointer;
+    }
+
+    input[type=range]{
+      cursor: ew-resize;
+    }
+
+    input[type=checkbox][disabled], button[disabled], input[type=range][disabled]{
+      cursor: not-allowed;
+    }
+
+    #note{
+      opacity: 0.6;
+      font: 400 11px system-ui;
+    }
